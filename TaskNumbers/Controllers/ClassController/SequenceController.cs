@@ -23,10 +23,12 @@ namespace TaskNumbers.Controllers.ClassController
         public void DisplaySequence()
         {
             Validator validator = new Validator();
+            displaySequence = new DisplaySequence();
+
             if (validator.Parsing(SquereNumber))
             {
                 sequence = new NumSequence(long.Parse(SquereNumber));
-                displaySequence = new DisplaySequence();
+                
                 foreach (long number in sequence)
                 {
                     displaySequence.DisplaySequenceOnScreen(number.ToString());
